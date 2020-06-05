@@ -158,6 +158,121 @@ namespace CSharp_Conditional_Statement
                 else Console.WriteLine("Fourth Quadrant.");
             }
             */
+            /* 10)
+            Console.Write("Input the marks obtained in Physics: ");
+            bool res = int.TryParse(Console.ReadLine(), out int physics );
+            Console.Write("Input the marks obtained in Chemistry: ");
+            res = int.TryParse(Console.ReadLine(), out int chem);
+            Console.Write("Input the marks obtained in Mathematics: ");
+            res = int.TryParse(Console.ReadLine(), out int math);
+            Test(physics, chem, math);
+            static void Test(int p, int c, int m)
+            {
+                if (p >= 55 && m >= 65 && c >=50 && (p+m+c >= 180 || p + m >= 140) )
+                {
+                    Console.WriteLine("The candidate is eligible for admission.");
+                }
+                else Console.WriteLine("The candidate is not eligible for admission.");
+            }
+            */
+            /* 11)
+            Console.Write("Input the value of a :");
+            bool res = int.TryParse(Console.ReadLine(), out int a);
+            Console.Write("Input the value of b :");
+            res = int.TryParse(Console.ReadLine(), out int b);
+            Console.Write("Input the value of c :");
+            res = int.TryParse(Console.ReadLine(), out int c);
+            Test(a, b, c);
+            static void Test(int a, int b, int c)
+            {
+                int d = b * b - 4 * a * c;
+                if (d==0)
+                {
+                    Console.WriteLine("Both roots are equal");
+                    Console.WriteLine($"First root {-b * (2 * a)}, Second Root {-b*(2*a)}");
+                }
+                else if ( d > 0)
+                {
+                    var root1 = (-b + Math.Sqrt(d)) / 2 * a;
+                    var root2 = (-b - Math.Sqrt(d)) / 2 * a;
+                    Console.WriteLine($"First root:{root1}, and second root: {root2}");
+                }
+                else
+                {
+                    Console.WriteLine("Roots are imaginary");
+                }
+            }
+            */
+            /* 12)
+            Console.Write("Input the Roll number of student:");
+            bool res = int.TryParse(Console.ReadLine(), out int roll);
+            Console.Write("Input the name of the student:");
+            string name = Console.ReadLine();
+            Console.Write("Input the marks of physics: ");
+            res = int.TryParse(Console.ReadLine(), out int physics);
+            Console.Write("Input the marks of chemistry: ");
+            res = int.TryParse(Console.ReadLine(), out int chemistry);
+            Console.Write("Input the marks of Computer Application: ");
+            res = int.TryParse(Console.ReadLine(), out int computerApplication);
+
+            Test(roll, name, physics, chemistry, computerApplication);
+            static void Test(int r, string n, double p, double c, double ca)
+            {
+                double percentage = (p + c + ca) / 3;
+                Console.WriteLine("Roll number: {0}",r);
+                Console.WriteLine("Name of student: {0}", n);
+                Console.WriteLine("Marks in Physics: {0}, Marks in Chemistry: {1}, Marks in Computer Application: {2}", p, c, ca);
+                Console.WriteLine("Total marks: {0}", p + c + ca);
+                Console.WriteLine("Percentage: {0}", percentage);
+                if (percentage >= 60) Console.WriteLine("First division");
+                else if (percentage < 60 && percentage >= 48) Console.WriteLine("Second division");
+                else if (percentage < 48 && percentage >= 36) Console.WriteLine("Pass");
+                else Console.WriteLine("Fail");
+            }
+            */
+            /* 13)
+            Console.Write("Enter temperature [oC]: ");
+            int.TryParse(Console.ReadLine(), out int temp);
+            Test(temp);
+            static void Test(int a)
+            {
+                if (a < 0) Console.WriteLine("Freezing weather.");
+                else if (a < 10) Console.WriteLine("Very cold weather.");
+                else if (a < 20) Console.WriteLine("Cold weather.");
+                else if (a < 30) Console.WriteLine("Normal in temp.");
+                else if (a < 40) Console.WriteLine("It's hot.");
+                else Console.WriteLine("It's very hot.");
+            }
+            */
+            /* 14)
+            Console.Write("Enter lenght of the first side of the triangle: ");
+            int.TryParse(Console.ReadLine(), out int first);
+            Console.Write("Enter lenght of the second side of the triangle: ");
+            int.TryParse(Console.ReadLine(), out int second);
+            Console.Write("Enter lenght of the third side of the triangle: ");
+            int.TryParse(Console.ReadLine(), out int third);
+            Test(first, second, third);
+            static void Test(int a, int b, int c)
+            {
+                if (a == b && b == c) Console.WriteLine("It is equilateral triangle."); 
+                else if (a == b || a == c || b == c) Console.WriteLine("It is isoceles triangle.");
+                else Console.WriteLine("It is scalene triangle.");
+            }
+            */
+            /* 15)
+            Console.Write("Enter lenght of the first edge of the triangle: ");
+            int.TryParse(Console.ReadLine(), out int first);
+            Console.Write("Enter lenght of the second edge of the triangle: ");
+            int.TryParse(Console.ReadLine(), out int second);
+            Console.Write("Enter lenght of the third edge of the triangle: ");
+            int.TryParse(Console.ReadLine(), out int third);
+            Test(first, second, third);
+            static void Test(int a, int b, int c)
+            {
+                if (a + b + c == 180) Console.WriteLine("The triangle is valid.");
+                else Console.WriteLine("The triangle is invalid.");
+            }
+            */
 
         }
     }

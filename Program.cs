@@ -291,6 +291,20 @@ namespace CSharp_Conditional_Statement
                 }
             }
             */
+            /* 17)
+            Console.Write("Input buy price: ");
+            int.TryParse(Console.ReadLine(), out int buy);
+            Console.Write("Input sell price: ");
+            int.TryParse(Console.ReadLine(), out int sell);
+            Test(buy, sell);
+            static void Test(int b, int s)
+            {
+                if (b > s) Console.WriteLine($"Your loss is {b - s}.");
+                else if (b == s) Console.WriteLine($"No profit, no loss.");
+                else Console.WriteLine($"Your profit is {s - b}.");
+            }
+            */
+
         }
     }
 }

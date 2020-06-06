@@ -304,6 +304,151 @@ namespace CSharp_Conditional_Statement
                 else Console.WriteLine($"Your profit is {s - b}.");
             }
             */
+            /* 18)
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+            Console.Write("Enter your customer ID: ");
+            string id = Console.ReadLine();
+            Console.Write("Enter unit consumed: ");
+            int.TryParse(Console.ReadLine(), out int unit);
+            Test(name, id, unit);
+            static void Test(string n, string i, int u)
+            {
+                double charge = 0;
+                double surcharge = 0;
+
+                if (u < 100)
+                {
+                    u = 100;
+                    charge = 1.2;
+                }
+                else if (u < 200) charge = 1.2;
+                else if (u < 400) charge = 1.5;
+                else if (u < 600)
+                {
+                    charge = 1.8;
+                    surcharge = 0.15;
+                }
+                else
+                {
+                    charge = 2;
+                    surcharge = 0.15;
+                }
+
+                Console.WriteLine("\nCustomer ID number: {0}.", i);
+                Console.WriteLine("Customer name: {0}.", n);
+                Console.WriteLine("Unit consumed: {0}.", u);
+                Console.WriteLine("Amount charges @{0} per unit: {1}", charge, charge * u);
+                Console.WriteLine("Surcharge amount: {0}", charge*u*surcharge);
+                Console.WriteLine("Net amount paid by customer: {0}", charge * u + charge * u * surcharge);
+            }
+            */
+            /* 19)
+            Console.Write("Input the grade: ");
+            string grade = Console.ReadLine().ToUpper();
+            Console.WriteLine("You have chosen: {0}",Grader(grade));
+            static string Grader(string g)
+            {
+                switch (g)
+                {
+                    case "E": return "Excellent";
+                    case "V": return "Very good";
+                    case "G": return "Good";
+                    case "A": return "Average";
+                    case "F": return "Fail";
+                    default: return "incorrect grade";
+                }
+            }
+            */
+            /* 20)
+            Console.Write("Input the number 1-7: ");
+            int.TryParse(Console.ReadLine(), out int day);
+            Console.WriteLine(Test(day));
+            static string Test(int d)
+            {
+                switch (d)
+                {
+                    case 1: return "Monday";
+                    case 2: return "Tuesday";
+                    case 3: return "Wednesday";
+                    case 4: return "Thursday";
+                    case 5: return "Friday";
+                    case 6: return "Saturday";
+                    case 7: return "Sunday";
+                    default: return "incorrect number";
+                }
+            }
+            */
+            /* 21)
+            Console.Write("Input the number 1-9: ");
+            int.TryParse(Console.ReadLine(), out int number);
+            Console.WriteLine(Test(number));
+            static string Test(int n)
+            {
+                switch (n)
+                {
+                    case 1: return "One";
+                    case 2: return "Two";
+                    case 3: return "Three";
+                    case 4: return "Four";
+                    case 5: return "Five";
+                    case 6: return "Six";
+                    case 7: return "Seven";
+                    case 8: return "Eight";
+                    case 9: return "Nine";
+                    default: return "incorrect number";
+                }
+            }
+            */
+            /* 22)
+            Console.Write("Input the number 1-12: ");
+            int.TryParse(Console.ReadLine(), out int number);
+            Console.WriteLine(Test(number));
+            static string Test(int n)
+            {
+                switch (n)
+                {
+                    case 1: return "January";
+                    case 2: return "February";
+                    case 3: return "March";
+                    case 4: return "April";
+                    case 5: return "May";
+                    case 6: return "June";
+                    case 7: return "July";
+                    case 8: return "August";
+                    case 9: return "September";
+                    case 10: return "October";
+                    case 11: return "November";
+                    case 12: return "December";
+                    default: return "incorrect number";
+                }
+            }
+            */
+            /* 23)
+            Console.Write("Input the month 1-12: ");
+            int.TryParse(Console.ReadLine(), out int number);
+            Console.WriteLine("Month has {0} days.", Test(number));
+            static string Test(int n)
+            {
+                switch (n)
+                {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12: return "31";
+                    case 2: return "28";
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11: return "30";
+
+                    default: return "incorrect number";
+                }
+            }
+            */
 
         }
     }

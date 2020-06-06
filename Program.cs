@@ -273,7 +273,24 @@ namespace CSharp_Conditional_Statement
                 else Console.WriteLine("The triangle is invalid.");
             }
             */
-
+            /* 16)
+            Console.Write("Enter the character: ");
+            string character = Console.ReadLine();
+            Test(character);
+            static void Test(string a)
+            {
+                switch (a)
+                {
+                    case "a": Console.WriteLine("Vovel"); break;
+                    case "e": Console.WriteLine("Vovel"); break;
+                    case "i": Console.WriteLine("Vovel"); break;
+                    case "o": Console.WriteLine("Vovel"); break;
+                    case "u": Console.WriteLine("Vovel"); break;
+                    case "y": Console.WriteLine("Vovel"); break;
+                    default: Console.WriteLine("Consonant"); break;
+                }
+            }
+            */
         }
     }
 }
